@@ -1,38 +1,36 @@
+🇧🇷 Português | 🇺🇸 [English](#english)
+
 # arduino-gerador-funcoes
 
-Gerador de funções com 4 formas de onda no ESP32 usando DAC e interrupção de timer.
+Gerador de funções com 4 formas de onda no ESP32 via DAC + ISR de timer.
 
-## Descrição
-
-Gerador de formas de onda que utiliza o DAC interno do ESP32 para produzir sinais analógicos a partir de tabelas de lookup com 112 amostras. A saída é atualizada por uma ISR de timer de hardware para frequência precisa e estável.
-
-## Hardware
-
-- Placa: ESP32
-- Saída DAC: GPIO 25 (seno), GPIO 26 (triangular)
-
-## Formas de onda disponíveis
-
-| Índice | Forma |
-|--------|-------|
-| 0 | Senoidal |
-| 1 | Triangular |
-| 2 | Dente de Serra |
-| 3 | Quadrada |
-
-## Parâmetros
-
-- **Amostras:** 112 pontos por ciclo
-- **Resolução DAC:** 8 bits (0–255)
-- **Prescaler timer:** 255 → ~312 kHz → ~2,8 kHz por forma de onda
+**Formas:** Senoidal · Triangular · Dente de Serra · Quadrada
+**DAC:** GPIO 25/26 · **Amostras:** 112 pts
 
 ## Como usar
 
 1. Abra `gerador_de_func.ino` no Arduino IDE
 2. Selecione **ESP32 Dev Module**
-3. Altere `wave_type` (0–3) para escolher a forma de onda
-4. Compile e grave
-
-## Escola
+3. Compile e grave
 
 Centro Tecnológico Liberato — Novo Hamburgo/RS
+
+---
+
+<a name="english"></a>
+🇧🇷 [Português](#) | 🇺🇸 English
+
+# arduino-gerador-funcoes
+
+4-waveform function generator on ESP32 via DAC + timer ISR.
+
+**Waveforms:** Sine · Triangle · Sawtooth · Square
+**DAC:** GPIO 25/26 · **Samples:** 112 pts
+
+## Usage
+
+1. Open `gerador_de_func.ino` in Arduino IDE
+2. Select **ESP32 Dev Module**
+3. Compile and flash
+
+Centro Tecnológico Liberato — Novo Hamburgo/RS, Brazil
